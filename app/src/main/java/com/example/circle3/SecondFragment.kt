@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.circle3.databinding.FragmentSecondBinding
+import kotlin.random.Random
 
 class SecondFragment : Fragment(), FirstFragment.OnDrawCircleListener {
 
@@ -25,10 +26,17 @@ class SecondFragment : Fragment(), FirstFragment.OnDrawCircleListener {
         return binding.root
     }
 
-
     override fun onDrawCircle(radius: Float) {
         this.radius = radius
         Log.d("SecondFragment", "Setting radius: $radius")
-        circleSurfaceView.setCircleRadius(radius)
+        val randomX = Random.nextInt(circleSurfaceView.width).toFloat()
+        val randomY = Random.nextInt(circleSurfaceView.height).toFloat()
+        circleSurfaceView.setCirclePosition(randomX, randomY)
     }
+
+//    override fun onDrawCircle(radius: Float) {
+//        this.radius = radius
+//        Log.d("SecondFragment", "Setting radius: $radius")
+//        circleSurfaceView.setCircleRadius(radius)
+//    }
 }
