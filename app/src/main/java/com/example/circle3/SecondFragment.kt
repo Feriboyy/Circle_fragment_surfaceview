@@ -34,9 +34,5 @@ class SecondFragment : Fragment(), FirstFragment.OnDrawCircleListener {
         circleSurfaceView.setCirclePosition(randomX, randomY)
     }
 
-//    override fun onDrawCircle(radius: Float) {
-//        this.radius = radius
-//        Log.d("SecondFragment", "Setting radius: $radius")
-//        circleSurfaceView.setCircleRadius(radius)
-//    }
+
 }

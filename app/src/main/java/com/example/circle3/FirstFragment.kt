@@ -17,8 +17,7 @@ class FirstFragment : Fragment() {
 
     lateinit var binding: FragmentFirstBinding
 
-//    private lateinit var radiusEditText: EditText
-//    private lateinit var drawCircleButton: Button
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,27 +29,6 @@ class FirstFragment : Fragment() {
 
 
         binding.drawCircleButton.setOnClickListener {
-
-//            val radiusText = binding.radiusEditText.text.toString()
-//
-//            if (radiusText.isNotBlank()) {
-//                try {
-//                    val radius = radiusText.toFloat()
-//                    val listener = activity as? OnDrawCircleListener
-//                    listener?.onDrawCircle(radius)
-//                } catch (e: NumberFormatException) {
-//                    // Handle the case where the input is not a valid float
-//                    // You can show a Toast or set an error message on the EditText
-//                    binding.radiusEditText.error = "Invalid radius"
-//                }
-//            } else {
-//                // Handle the case where the input is empty
-//                binding.radiusEditText.error = "Enter a radius"
-//            }
-
-
-
-
 
             val radius = binding.radiusEditText.text.toString().toFloat()
             if (radius != null) {

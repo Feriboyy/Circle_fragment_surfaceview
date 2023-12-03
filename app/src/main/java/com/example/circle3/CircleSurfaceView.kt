@@ -37,7 +37,7 @@ class CircleSurfaceView : SurfaceView, SurfaceHolder.Callback {
         canvas.drawColor(Color.WHITE)
 
         val paint = Paint().apply {
-            color = getRandomColor() // Call a function to get a random color
+            color = getRandomColor()
             style = Paint.Style.FILL
         }
 
@@ -55,28 +55,10 @@ class CircleSurfaceView : SurfaceView, SurfaceHolder.Callback {
     }
 
     fun setCirclePosition(x: Float, y: Float) {
-        // Update the position of the circle
         circleX = x
         circleY = y
         drawCircle()
     }
-
-//    private fun drawCircle() {
-//        val canvas = holder.lockCanvas()
-//        canvas.drawColor(Color.WHITE)
-//
-//        val paint = Paint().apply {
-//            color = Color.RED
-//            style = Paint.Style.FILL
-//        }
-//
-//        val centerX = canvas.width / 2f
-//        val centerY = canvas.height / 2f
-//
-//        canvas.drawCircle(centerX, centerY, radius, paint)
-//
-//        holder.unlockCanvasAndPost(canvas)
-//    }
 
     override fun surfaceCreated(holder: SurfaceHolder) {
         Log.d("CircleSurfaceView", "Surface created")

@@ -8,12 +8,15 @@
     <EditText
         android:id="@+id/radiusEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Radius"/>
+        android:layout_height="@dimen/tv_height_dimen"
+        android:hint="Enter Radius"
+        android:layout_marginTop="@dimen/margin_medium"
+        />
 
     <Button
         android:id="@+id/drawCircleButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Draw Circle"/>
+        android:text="Draw Circle"
+        android:layout_marginTop="@dimen/margin_medium"/>
 </LinearLayout>
